@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive 3D Solar System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NEW: Toggle button to show/hide the control panel -->
+    <button id="toggle-controls-btn">Hide Controls</button>
+
+    <!-- This div will be populated by JavaScript to create the controls -->
+    <div id="control-panel">
+      <h2>Orbital Speed Controls</h2>
+      <div id="planet-controls-container"></div>
+    </div>
+
+    <!-- Three.js library using ES6 modules and an import map -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <!-- Our main application script -->
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
